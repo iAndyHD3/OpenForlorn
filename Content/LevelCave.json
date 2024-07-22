@@ -1,0 +1,204 @@
+{
+  "bgContainer": {},
+  "blockContainer": {
+    "0": {
+      "animated": 1,
+      "customAnim": 0,
+      "flipped": [0, 0],
+      "frameOffset": 0,
+      "mType": 0,
+      "p_uID": 0,
+      "position": [431.9, 242.7],
+      "scale": [0.69, 0.69],
+      "sheetType": "B3",
+      "skipEndAnim": 0,
+      "skipStartAnim": 1,
+      "spriteSheet": "CommonSheet_01",
+      "texture": "Fire_01.png",
+      "type": "disabled",
+      "zValue": 0
+    },
+    "1": {
+      "animated": 1,
+      "customAnim": 0,
+      "flipped": [0, 0],
+      "frameOffset": 0,
+      "mType": 0,
+      "p_uID": 1,
+      "position": [44.9, 242.7],
+      "scale": [0.69, 0.69],
+      "sheetType": "B3",
+      "skipEndAnim": 0,
+      "skipStartAnim": 1,
+      "spriteSheet": "CommonSheet_01",
+      "texture": "Fire_01.png",
+      "type": "disabled",
+      "zValue": 1
+    },
+    "2": {
+      "flipped": [0, 0],
+      "ignoreEdges": 0,
+      "mType": 4,
+      "p_uID": 2,
+      "points": {
+        "point_0": {
+          "angle": 9.843,
+          "position": [-90.8, -134.7]
+        },
+        "point_1": {
+          "angle": 0.014,
+          "position": [-65.4, 115.3]
+        },
+        "point_2": {
+          "angle": 10.991,
+          "position": [285.9, 110.3]
+        },
+        "point_3": {
+          "angle": 0,
+          "position": [308.1, -133.7]
+        }
+      },
+      "position": [103.3, -5.4],
+      "scale": [1.1, 1.0],
+      "sheetType": "B2",
+      "spriteSheet": "FrostLevel_Sheet02",
+      "texture": "sn_snowground_big.png",
+      "type": "curved",
+      "zValue": 0
+    },
+    "3": {
+      "flipped": [0, 0],
+      "ignoreEdges": 0,
+      "mType": 4,
+      "p_uID": 3,
+      "points": {
+        "point_0": {
+          "angle": 9.69,
+          "position": [246.5, -137.7]
+        },
+        "point_1": {
+          "angle": 0.014,
+          "position": [272.3, 112.3]
+        },
+        "point_2": {
+          "angle": 10.844,
+          "position": [628.6, 107.3]
+        },
+        "point_3": {
+          "angle": 0,
+          "position": [651.1, -136.7]
+        }
+      },
+      "position": [443.4, -8.4],
+      "scale": [1.12, 1.0],
+      "sheetType": "B2",
+      "spriteSheet": "FrostLevel_Sheet02",
+      "texture": "sn_snowground_big.png",
+      "type": "curved",
+      "zValue": 1
+    },
+    "4": {
+      "flipped": [0, 0],
+      "mType": 4,
+      "p_uID": 4,
+      "position": [120.5, 129.1],
+      "scale": [1.0, 1.0],
+      "sheetType": "B2",
+      "spriteSheet": "FrostLevel_Sheet02",
+      "texture": "sn_crystal_purple_medium.png",
+      "type": "disabled",
+      "zValue": 2
+    },
+    "5": {
+      "flipped": [0, 0],
+      "mType": 4,
+      "p_uID": 5,
+      "position": [435.6, 159.6],
+      "scale": [1.0, 1.0],
+      "sheetType": "B1",
+      "spriteSheet": "FrostLevel_Sheet01",
+      "texture": "sn_torch_pillar.png",
+      "type": "disabled",
+      "zValue": 0
+    },
+    "6": {
+      "flipped": [0, 0],
+      "mType": 4,
+      "p_uID": 6,
+      "position": [52.6, 159.6],
+      "scale": [1.0, 1.0],
+      "sheetType": "B1",
+      "spriteSheet": "FrostLevel_Sheet01",
+      "texture": "sn_torch_pillar.png",
+      "type": "disabled",
+      "zValue": 1
+    },
+    "13": {
+      "flipped": [0, 0],
+      "mType": 4,
+      "p_uID": 13,
+      "position": [512.6, 378.2],
+      "rotation": -166.1,
+      "scale": [1.0, 1.0],
+      "sheetType": "F1",
+      "spriteSheet": "FrostLevel_Sheet02",
+      "texture": "sn_mountain_ground_2.png",
+      "type": "disabled",
+      "zValue": 0
+    },
+    "14": {
+      "flipped": [1, 0],
+      "mType": 4,
+      "p_uID": 14,
+      "position": [-11.5, 399.1],
+      "rotation": -210.1,
+      "scale": [1.0, 1.0],
+      "sheetType": "F1",
+      "spriteSheet": "FrostLevel_Sheet02",
+      "texture": "sn_mountain_ground_1.png",
+      "type": "disabled",
+      "zValue": 1
+    }
+  },
+  "commandContainer": {},
+  "drawingContainer": {},
+  "fireflyContainer": {},
+  "itemContainer": {},
+  "levelSize": [512, 399],
+  "npcContainer": {},
+  "playerSpawn": [226.5, 160.3],
+  "settings": {
+    "bgImage": "cave_bg_01",
+    "bgMusic": 0,
+    "enableShadowMode": 0,
+    "fadeEntry": 0,
+    "introLevelText": "Cave of DOOM",
+    "offsetBGY": 0,
+    "textBlue": 255,
+    "textGreen": 170,
+    "textRed": 66
+  },
+  "setup": {},
+  "sheetContainer": {
+    "sheet_0": {
+      "texture": "CommonSheet_01",
+      "type": "B3"
+    },
+    "sheet_1": {
+      "texture": "FrostLevel_Sheet02",
+      "type": "B2"
+    },
+    "sheet_2": {
+      "texture": "FrostLevel_Sheet01",
+      "type": "B1"
+    },
+    "sheet_3": {
+      "texture": "FrostLevel_Sheet02",
+      "type": "F1"
+    }
+  },
+  "sounds": "",
+  "textContainer": {},
+  "triggerContainer": {},
+  "weather": ""
+}

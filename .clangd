@@ -1,0 +1,6 @@
+Index:
+  Background: Skip
+
+Diagnostics:
+  ClangTidy:
+    FastCheckFilter: Strict
