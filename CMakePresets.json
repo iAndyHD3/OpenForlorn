@@ -6,32 +6,58 @@
     "patch": 0
   },
     "configurePresets": [
-      {
-        "name": "ninja-sccache-release-prebuilt",
-        "description": "Use Ninja generator with sccache and RelWithDebInfo build type",
-        "generator": "Ninja",
-        "binaryDir": "${sourceDir}/build",
-        "cacheVariables": {
-          "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
-          "CMAKE_C_COMPILER_LAUNCHER": "sccache",
-          "CMAKE_CXX_COMPILER_LAUNCHER": "sccache",
-          "CMAKE_BUILD_TYPE": "RelWithDebInfo",
-          "AX_EXT_HINT": "OFF",
-          "AX_ENABLE_EXT_INSPECTOR": "ON",
-          "AX_ENABLE_EXT_IMGUI": "ON",
-          "AX_ENABLE_CONSOLE": "OFF",
-          "AX_ENABLE_AUDIO": "OFF",
-          "AX_ENABLE_MEDIA": "OFF",
-          "AX_ENABLE_NAVMESH": "OFF",
-          "AX_ENABLE_3D_PHYSICS": "OFF",
-          "AX_ENABLE_3D": "OFF",
-          "AX_ENABLE_WEBSOCKET": "OFF",
-          "AX_ENABLE_HTTP": "OFF",
-          "AX_ENABLE_VLC_MEDIA": "OFF",
-          "AX_ENABLE_MFMEDIA": "OFF",
-          "AX_ENABLE_MSEDGE_WEBVIEW2": "OFF",
-          "AX_PREBUILT_DIR": "build"
+        {
+            "name": "ninja-sccache-release-prebuilt",
+            "description": "Use Ninja generator with sccache and RelWithDebInfo build type",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build",
+            "cacheVariables": {
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+                "CMAKE_C_COMPILER_LAUNCHER": "sccache",
+                "CMAKE_CXX_COMPILER_LAUNCHER": "sccache",
+                "CMAKE_BUILD_TYPE": "RelWithDebInfo",
+                "AX_EXT_HINT": "OFF",
+                "AX_ENABLE_EXT_INSPECTOR": "ON",
+                "AX_ENABLE_EXT_IMGUI": "ON",
+                "AX_ENABLE_CONSOLE": "OFF",
+                "AX_ENABLE_AUDIO": "OFF",
+                "AX_ENABLE_MEDIA": "OFF",
+                "AX_ENABLE_NAVMESH": "OFF",
+                "AX_ENABLE_3D_PHYSICS": "OFF",
+                "AX_ENABLE_3D": "OFF",
+                "AX_ENABLE_WEBSOCKET": "OFF",
+                "AX_ENABLE_HTTP": "OFF",
+                "AX_ENABLE_VLC_MEDIA": "OFF",
+                "AX_ENABLE_MFMEDIA": "OFF",
+                "AX_ENABLE_MSEDGE_WEBVIEW2": "OFF",
+                "AX_PREBUILT_DIR": "build"
+            }
+        },
+        {
+            "name": "vs2022-no-prebuilt",
+            "description": "Use vs2022 with no prebuilt engine",
+            "generator": "Visual Studio 17 2022",
+            "binaryDir": "${sourceDir}/vsbuild2022",
+            "cacheVariables": {
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+                "CMAKE_C_COMPILER_LAUNCHER": "sccache",
+                "CMAKE_CXX_COMPILER_LAUNCHER": "sccache",
+                "CMAKE_BUILD_TYPE": "Debug",
+                "AX_EXT_HINT": "OFF",
+                "AX_ENABLE_EXT_INSPECTOR": "ON",
+                "AX_ENABLE_EXT_IMGUI": "ON",
+                "AX_ENABLE_CONSOLE": "OFF",
+                "AX_ENABLE_AUDIO": "OFF",
+                "AX_ENABLE_MEDIA": "OFF",
+                "AX_ENABLE_NAVMESH": "OFF",
+                "AX_ENABLE_3D_PHYSICS": "OFF",
+                "AX_ENABLE_3D": "OFF",
+                "AX_ENABLE_WEBSOCKET": "OFF",
+                "AX_ENABLE_HTTP": "OFF",
+                "AX_ENABLE_VLC_MEDIA": "OFF",
+                "AX_ENABLE_MFMEDIA": "OFF",
+                "AX_ENABLE_MSEDGE_WEBVIEW2": "OFF"
+            }
         }
-      }
     ]
   }

@@ -44,8 +44,10 @@ MAKE_HASHABLE(Level::SheetData, self.texture, self.type)
 
 struct PlayLayer::members
 {
-    ax::Vec2 playerPos = {0,0};
+    ax::Vec2 playerPos = {};
+    ax::Vec2 spawnPos = {};
     float camSpeed = 7;
+    float zoom = 1;
 
     bool up = false;
     bool down = false;
@@ -89,7 +91,10 @@ bool PlayLayer::init(const Args& args)
     auto levelstr = FileUtils::getInstance()->getStringFromFile("Level001.json");
 
     Level lvl;
-    constexpr auto opts = glz::opts{.error_on_unknown_keys = false, .bools_as_numbers = true};
+    constexpr auto opts = glz::opts{
+        .error_on_unknown_keys = false,
+        .bools_as_numbers = true
+    };
     auto errorCode = glz::read<opts, Level>(lvl, levelstr);
 
     AX_ASSERT(errorCode == 0);
@@ -97,6 +102,7 @@ bool PlayLayer::init(const Args& args)
 
     //LOADING OF EVERYTHING!!!!
 
+    m.spawnPos = lvl.playerSpawn;
     m.playerPos = lvl.playerSpawn;
 
     //auto bgstr = fmt::format("{}.png", lvl.settings.bgImage);
@@ -181,10 +187,11 @@ bool PlayLayer::init(const Args& args)
 
     scheduleUpdate();
 
-
-    DEVTOOLS_ADDVAR(m.camSpeed);
-    DEVTOOLS_ADDVAR(m.playerPos.x);
-    DEVTOOLS_ADDVAR(m.playerPos.y);
+    m.zoom = Camera::getDefaultCamera()->getZoom();
+    DEVTOOLS_ADDVAR_0(m.camSpeed);
+    DEVTOOLS_ADDVAR_0(m.playerPos.x);
+    DEVTOOLS_ADDVAR_0(m.playerPos.y);
+    DevTools::get()->dragVar("zoom", m.zoom, 0.05, 0.1f, 2.0f);
 
     //so that we dont spawn in the dark...
     
@@ -200,11 +207,16 @@ void PlayLayer::onEnter()
 
 void PlayLayer::onDrawImgui()
 {
-    if(ImGui::Begin("Hello world"))
+    if (!ImGui::Begin("Hello world")) return ImGui::End();
+    
+    ImGui::SetWindowSize({600, 350}, ImGuiCond_Once);
+    DevTools::get()->drawImgui();
+
+    if (ImGui::Button("Player spawn"))
     {
-        ImGui::SetWindowSize({600, 350}, ImGuiCond_Once);
-        DevTools::get()->drawImgui();
+        m.playerPos = m.spawnPos;
     }
+    
     ImGui::End();
     
 }
@@ -217,6 +229,7 @@ void PlayLayer::update(float dt)
     if(m.right) onRight();
 
     this->getDefaultCamera()->setPosition(m.playerPos);
+    this->getDefaultCamera()->setZoom(m.zoom);
 }
 
 
@@ -236,8 +249,6 @@ void PlayLayer::onUp()
 void PlayLayer::onDown()
 {
     m.playerPos.y -= m.camSpeed;
-
-
 }
 
 void PlayLayer::onTouchesBegan(const std::vector<ax::Touch*>& touches, ax::Event* event)

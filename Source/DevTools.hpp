@@ -6,6 +6,7 @@
 
 #define STRINGIFY(s) #s
 #define DEVTOOLS_ADDVAR(var, ...) DevTools::get()->dragVar(STRINGIFY(var), var, __VA_ARGS__)
+#define DEVTOOLS_ADDVAR_0(var) DevTools::get()->dragVar(STRINGIFY(var), var)
 
 template<typename T>
 concept IntOrFloat = std::same_as<T, int> || std::same_as<T, float>;
